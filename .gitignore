@@ -1,0 +1,8 @@
+bin
+lib
+tmp
+*.o
+*PATH
+*TAGS
+*.root
+*.dat
