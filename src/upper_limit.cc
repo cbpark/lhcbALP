@@ -37,15 +37,10 @@ double upperLimit(std::shared_ptr<TFile> file_ex, const double mass,
     }
 
     char name[100];
-    switch (type) {
-    case 0:
+    if (type == 0) {
         std::sprintf(name, "rel_ul_spline_%d", mmin);
-        break;
-    case 1:
+    } else {
         std::sprintf(name, "abs_ul_spline_%d", mmin);
-        break;
-    default:
-        return -666;
     }
 
     auto spl =
