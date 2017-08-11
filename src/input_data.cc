@@ -9,8 +9,10 @@
 namespace lhcb {
 double exp10(const double x) { return std::pow(10, x); }
 
+// the input data has log10(mass).
 double InputData::mass() const { return exp10(mass_); }
 
+// the input data has log10(tau).
 double InputData::tau() const { return exp10(tau_); }
 
 std::ostream &operator<<(std::ostream &os, const InputData &data) {
@@ -22,9 +24,9 @@ std::ostream &operator<<(std::ostream &os, const InputData &data) {
 double upperLimit(std::shared_ptr<TFile> file_ex, const InputData &data) {
     const double mass = data.mass(), tau = data.tau();
     switch (data.type()) {
-    case LimitType::REL:
+    case LimitType::REL:  // upper limit relative to BR(B --> K^* mu+ mu-)
         return upperLimitRelative(file_ex, mass, tau);
-    case LimitType::ABS:
+    case LimitType::ABS:  // absolute upper limit
         return upperLimitAbsolute(file_ex, mass, tau);
     default:
         return -666;

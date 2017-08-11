@@ -8,7 +8,7 @@
 
 namespace lhcb {
 /*
- *  mass: mass in MeV
+ *  mass: ALP mass in MeV
  *  tau:  lifetime in ps
  *  type: 0 = relative, 1 = absolute limits
  *

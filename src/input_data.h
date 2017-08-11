@@ -21,8 +21,16 @@ public:
               const LimitType type)
         : mass_(mass), tau_(tau), f_a_(f_a), type_(type) {}
 
+    /**
+     *  ALP mass in MeV.
+     */
     double mass() const;
+
+    /**
+     *  Lifetime of ALP in pb.
+     */
     double tau() const;
+
     LimitType type() const { return type_; }
 
     friend std::ostream &operator<<(std::ostream &os, const InputData &data);
