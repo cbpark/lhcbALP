@@ -14,11 +14,11 @@ LDFLAGS  += $(shell root-config --ldflags) \
 LIBS     += $(shell root-config --noauxlibs --libs)
 
 # Targets
-EXE        := $(BINDIR)/lhcb_bound_2015 $(BINDIR)/lhcb_bound_2016
-EXESRC     := $(patsubst $(BINDIR)/%,$(SRCDIR)/%.cc,$(EXE))
-EXEOBJ     := $(EXESRC:.cc=.o)
-LIBSRC     := $(filter-out $(EXESRC),$(wildcard $(SRCDIR)/*.cc))
-LIBOBJ     := $(LIBSRC:.cc=.o)
+EXE    := $(BINDIR)/lhcb_bound_2015 $(BINDIR)/lhcb_bound_2016
+EXESRC := $(patsubst $(BINDIR)/%,$(SRCDIR)/%.cc,$(EXE))
+EXEOBJ := $(EXESRC:.cc=.o)
+LIBSRC := $(filter-out $(EXESRC),$(wildcard $(SRCDIR)/*.cc))
+LIBOBJ := $(LIBSRC:.cc=.o)
 
 .PHONY: all build clean
 
