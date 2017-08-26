@@ -14,7 +14,7 @@ Code to obtain the upper limits on the branching ratio of axion-like particles f
 
 Download [`LHCb-PAPER-2015-036-figures.zip`](https://cds.cern.ch/record/2045144/files/LHCb-PAPER-2015-036-figures.zip) and put `lhcb_2015_035.root` into [`data`](data) directory. Then, run `make` to get `bin/lhcb_bound_2015` and `bin/lhcb_bound_2016`.
 
-* If building is too slow with GCC, it is recommended to use the [Clang](https://clang.llvm.org) compiler.
+* If building is too slow with GCC, it is recommended to use the [clang](https://clang.llvm.org) compiler.
 
 ```
 CXX=clang++ make
