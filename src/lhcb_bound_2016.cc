@@ -1,16 +1,11 @@
-#include "lhcb_bound.h"
 #include <fstream>
-#include <iomanip>
 #include <iostream>
-#include <memory>
 #include <sstream>
-#include <string>
-#include "TFile.h"
 #include "input_data.h"
-#include "upper_limit.h"
+#include "upper_limit_2016.h"
+#include "user_interface.h"
 
-const char appname[] = "lhcb_bound";
-const char exp_result[] = "data/lhcb_2015_036.root";
+const char appname[] = "lhcb_bound_2016";
 
 int main(int argc, char *argv[]) {
     if (argc != 3) {
@@ -22,8 +17,7 @@ int main(int argc, char *argv[]) {
     std::ifstream fin(argv[1]);
     if (fin.fail()) { return failToRead(appname, argv[1]); }
 
-    if (!file_exists(exp_result)) { return failToRead(appname, exp_result); }
-    auto f_ex = std::make_shared<TFile>(exp_result);
+    auto upperLimitHist = lhcb::histUpperLimit();
 
     std::string line;
     std::ofstream fout(argv[2]);
@@ -31,8 +25,9 @@ int main(int argc, char *argv[]) {
         double mass, f_a, tau;
         std::istringstream iss(line);
         iss >> mass >> f_a >> tau;
-        lhcb::InputData data{mass, f_a, tau, lhcb::LimitType::ABS};
-        fout << data << std::setw(22) << lhcb::upperLimit(f_ex, data) << '\n';
+        lhcb::InputData data{mass, f_a, tau};
+        fout << data << std::setw(22)
+             << lhcb::upperLimit2016(upperLimitHist, data) << '\n';
     }
     message(appname,
             "output has been stored to `" + std::string(argv[2]) + ".");

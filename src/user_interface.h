@@ -1,5 +1,5 @@
-#ifndef LHCB_ALP_SRC_LHCB_BOUND_H_
-#define LHCB_ALP_SRC_LHCB_BOUND_H_
+#ifndef LHCB_ALP_SRC_USER_INTERFACE_H_
+#define LHCB_ALP_SRC_USER_INTERFACE_H_
 
 #include <fstream>
 #include <iostream>
@@ -21,4 +21,4 @@ void message(const std::string &appname, const std::string &msg) {
     std::cout << appname << ": " << msg << '\n';
 }
 
-#endif  // LHCB_ALP_SRC_LHCB_BOUND_H_
+#endif  // LHCB_ALP_SRC_USER_INTERFACE_H_

@@ -1,5 +1,5 @@
-#ifndef LHCB_ALP_SRC_UPPER_LIMIT_H_
-#define LHCB_ALP_SRC_UPPER_LIMIT_H_
+#ifndef LHCB_ALP_SRC_UPPER_LIMIT_2015_H_
+#define LHCB_ALP_SRC_UPPER_LIMIT_2015_H_
 
 #include <memory>
 #include "TFile.h"
@@ -12,4 +12,4 @@ double upperLimitAbsolute(std::shared_ptr<TFile> file_ex, const double mass,
                           const double tau);
 }  // namespace lhcb
 
-#endif  // LHCB_ALP_SRC_UPPER_LIMIT_H_
+#endif  // LHCB_ALP_SRC_UPPER_LIMIT_2015_H_
