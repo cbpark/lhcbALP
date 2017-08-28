@@ -1,6 +1,6 @@
-# lhcb-alp
+# lhcbALP
 
-Code to obtain the upper limits on the branching ratio of axion-like particles from the [LHCb](http://lhcb-public.web.cern.ch/lhcb-public/) experiment:
+Codes to obtain the upper limits on the branching ratio of axion-like particles from the [LHCb](http://lhcb-public.web.cern.ch/lhcb-public/) experiment:
 
 * [arXiv:1508.04094](https://arxiv.org/abs/1508.04094),
 * [arXiv:1612.07818](https://arxiv.org/abs/1612.07818).
