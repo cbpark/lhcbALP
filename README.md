@@ -5,6 +5,8 @@ Codes to obtain the upper limits on the branching ratio of axion-like particles 
 * [arXiv:1508.04094](https://arxiv.org/abs/1508.04094),
 * [arXiv:1612.07818](https://arxiv.org/abs/1612.07818).
 
+It has been used for analysis of [arXiv:1708.00021](https://arxiv.org/abs/1708.00021).
+
 ## Prerequisites
 
 * C++ compiler supporting C++14 features,
